@@ -20,13 +20,13 @@ vim.opt.syntax = 'on'
 --vim.opt.nocompatible = true
 
 -- Set tab width to 4 columns.
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 
 vim.opt.autoindent = true
 
-vim.opt.cindent = true
+vim.opt.cindent = false
 
 --vim.opt.backup = true
 
