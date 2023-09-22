@@ -22,7 +22,7 @@ vim.opt.syntax = 'on'
 -- Set tab width to 4 columns.
 vim.opt.tabstop = 4
 
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 
 vim.opt.autoindent = true
 
@@ -43,3 +43,5 @@ vim.opt.ignorecase = true
 
 -- Enable type file detection. Vim will be able to try to detect the type of file in use.
 vim.opt.filetype = 'on'
+
+vim.opt.clipboard = 'unnamedplus'

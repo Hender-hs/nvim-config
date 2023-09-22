@@ -16,6 +16,9 @@ vim.keymap.set("n", "<leader>cc", vim.cmd.NvimTreeCollapse)
 vim.keymap.set("n", "<leader>nf", vim.cmd.NvimTreeGenerateOnAttach)
 vim.keymap.set("n", "<leader>mm", vim.cmd.Mason)
 
+-- Vim commands
+vim.keymap.set("n", "<leader>s", vim.cmd.vsplit)
+
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

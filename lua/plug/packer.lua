@@ -18,17 +18,62 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+	-- https://github.com/catppuccin/nvim
+	use({ 
+	  "catppuccin/nvim",
+	  name = "catppuccin",
+	  config = function()
+		  require("catppuccin").setup({
+			  flavour = "mocha", -- latte, frappe, macchiato, mocha
+			  term_colors = false,
+			  transparent_background = false,
+			  no_italic = false,
+			  no_bold = false,
+			  styles = {
+				  comments = {},
+				  conditionals = {},
+				  loops = {},
+				  functions = {},
+				  keywords = {},
+				  strings = {},
+				  variables = {},
+				  numbers = {},
+				  booleans = {},
+				  properties = {},
+				  types = {},
+			  },
+			  color_overrides = {
+				  mocha = {
+					  base = "#000000",
+					  mantle = "#000000",
+					  crust = "#000000",
+				  },
+			  },
+			  highlight_overrides = {
+				  mocha = function(C)
+					  return {
+						  -- TabLineSel = { bg = C.pink },
+						  -- CmpBorder = { fg = C.surface2 },
+						  -- Pmenu = { bg = C.none },
+						  -- TelescopeBorder = { link = "FloatBorder" },
+					  }
+				  end,
+			  },
+		  })
 
+		  vim.cmd.colorscheme "catppuccin"
+	  end,
+	})
 	
 	-- Rosé Pine theme
-	use({
-		'rose-pine/neovim',
-		as = 'rose-pine',
-		config = function()
-			require("rose-pine").setup()
-			vim.cmd('colorscheme rose-pine')
-	    end
-	})
+	-- use({
+		-- 'rose-pine/neovim',
+		-- as = 'rose-pine',
+		-- config = function()
+			-- require("rose-pine").setup()
+			-- vim.cmd('colorscheme rose-pine')
+	    -- end
+	-- })
 
 	use('nvim-treesitter/nvim-treesitter', {run =':TSUpdate'})
 	-- use('mbbill/undotree')
