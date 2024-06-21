@@ -1,3 +1,4 @@
+# validate this file; the binary is not runing
 curl -O https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage &&
 		
 		git clone --depth 1 https://github.com/wbthomason/packer.nvim\
