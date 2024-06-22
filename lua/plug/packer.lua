@@ -67,6 +67,7 @@ return require('packer').startup(function(use)
 		-- nvim tree lua.
 		-- https://github.com/nvim-tree/nvim-tree.lua
 		-- Its ICONS requires the "https://www.nerdfonts.com/" fonts configured in your terminal
+		-- If in case it fails in the installation, comment the requires and the tag
 		use {
 		  'nvim-tree/nvim-tree.lua',
 		  requires = {
